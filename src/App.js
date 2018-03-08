@@ -6,23 +6,11 @@ import Card from './Card';
 
 class App extends Component {
   state = {
-    cards: [
-      { front: 'Blah', back: 'Halb', show: true },
-      { front: 'What', back: 'Tahw', show: true },
-      { front: 'Please', back: 'Esaelp', show: true },
-      { front: 'Work', back: 'Krow', show: true },
-    ]
-  }
-
-  toggleShowCard = () => {
-    this.setState( state => {
-      return { showCard: !state.showCard}
-    });
+    cards: []
   }
 
 
   render() {
-    const { cards } = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -30,7 +18,8 @@ class App extends Component {
           <h1 className="App-title">React Strikes Back!</h1>
         </header>
         <div>
-          <Card name="first" />
+          <Card name="Front" />
+            <Card name="Back" />
         </div>
       </div>
     );
